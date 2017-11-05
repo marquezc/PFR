@@ -1,0 +1,78 @@
+# Development Plan for PFR Tool
+
+# Concept
+
+1.  PP receives notification that frequency event occurred.
+2.  Data is manually extracted and saved to a location as a csv.
+3.  Analysis Update script is run:
+
+    3a. Event csv file is parsed and event data is stored in arrays.
+    3b. Event analysis is performed using data arrays and results are
+        stored in an event log file.  
+        
+        Analysis should include:
+  
+            - T0
+            - Events online at the time of the event
+            - Max/Min peak frequencies, Max/Min peak NAI
+            - Average (T0-16 to T0-2) and (T0+20 to T0+52) frequencies
+            - Average (T0-16 to T0-2) and (T0+20 to T0+52) NAI and unit MW 
+            - Expectation (FRO) based on frequency delta (NERC metric) 
+            - Combined fleet MW response (summed unit MW responses) based on 
+              pre- and post-event averages. 
+            - Breakdown of expected and actual responses for each unit online
+              based on pre- and post-event averages
+            - Unit proximity to capability and/or PFR MW/Limits
+
+    3c. Analysis trends are built using data arrays and an image (.png) is stored.
+
+        For each event, trend 
+
+            - Figure 1 - Single Plot
+              Frequency vs NAI vs Summed Gross MW vs FRO
+
+            - Figures 2 - X - Double Plot
+              Frequency vs Unit Gross MW vs PFR AC/EN signal
+              Unit Gross MW vs PFR MW limits and/or Capability 
+
+        Save each trend figure as a .png file for use in html reporting
+
+    3d.  HTML reporting page is built for the event.
+
+        Basic Format:
+
+        Header1 (Primary Frequency Response Event Analysis)
+
+        Header2 (Date and T0 of Event - Event Type [RCIS, NERC Quarterly, etc.]
+
+        --- Horizontal Rule ---
+        
+        Navigation to PFR Reporting Interface Main Page
+
+        --- Horizontal Rule ---
+
+        List of units online at the time of event
+
+        Table of overall event info (Good/Bad NAI Response, Good/Bad Fleet MW Response, 
+            Peak Frequencies, FRO for NAI, FRO for units, NAI Response, Unit MW Response, 
+            Unit Good/Bad Response breakdown)
+
+        Analysis Figure 1
+
+        --- Horizontal Rule ---
+        Table 2 and Figure 2 to Table X and Figure X of unit event data 
+
+    3e. Periodic metrics are updated 
+    3f. PFR Reporting Interface is updated to include navigation to the new event analysis page and any changes in periodic metrics.
+
+# PRI Home Page
+
+-   Should be basic, quick to read and navigate, and browser friendly
+-   Should contain some metrics for YTD and QtrTD response success ratios
+-   Should contain some navigation methodology for looking up past events
+    by Yearly Listing, Quarterly Listing, Monthly Listing, 
+    RCIS Listing, NERC Inquiry listing 
+
+
+
+

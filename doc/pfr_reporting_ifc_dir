@@ -1,0 +1,28 @@
+# File Structure for PFR Tool
+
+index.html - PFR Reporting Interface (PRI) Home Page
+
+js/ - All javascript required for PRI (basic and browser friendly!)
+css/ - All css required for PRI (basic and browser friendly!)
+py/ - All python requred for PRI analysis and report builds  
+doc/ - Documentation of the process in case anybody ever needs
+    to touch it besides me.
+
+events/ - Main folder for event data
+ev-date-#/ - Folder for a single event.  Folder name should be of
+     the format 'ev-171022-0' 
+
+ev-date-#/ev-data.csv - Csv with event data pulled from EMS
+ev-date-#/ev-log.txt - Post analysis log of all pertinent event data
+     for easy HTML build           
+ev-date-#/ev.html - HTML Report of complete event analysis
+ev-date-#/img - contains all event trend .pngs
+
+periodic/ - Folder for periodic metric data for all years
+    Logs in the periodic/ subdirs will be used to update metrics
+    on the PRI homepage.
+periodic/XXXX/ - Folder containing metric data for a specific year 
+periodic/XXXX/y-log.txt - metric data for all events in a year
+periodic/XXXX/m_XX-log.txt - metric data for all events in a month
+periodic/XXXX/rcis.log.txt - metric data for all rcis events in a year
+periodic/XXXX/inquiry-log.txt - metric data for all rcis events in a year 
