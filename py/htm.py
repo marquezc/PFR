@@ -14,6 +14,8 @@ header_markup = """
 <script src="js/base_js.js"></script>
 </head>
 <body>
+<h2>Primary Frequency Response Reporting Interface</h2>
+<hr/>
 """
 
 footer_markup = """
@@ -30,7 +32,7 @@ index_nav_markup = """
             <td><a href=''>2018</a></td>
             <td><a href=''>2019</a></td>
             <td><a href=''>2020</a></td>
-            <td><a href=''>PFR Basics</a></td>
+            <td><a href='basics.html'>PFR Basics</a></td>
         </tr>
     </table>
 </div>
@@ -43,7 +45,7 @@ event_nav_markup = """
     <table>
         <tr>
             <td><a href=''>Index</a></td> 
-            <td><a href=''>PFR Basics</a></td>
+            <td><a href='basics.html'>PFR Basics</a></td>
         </tr>
     </table>
 </div>
