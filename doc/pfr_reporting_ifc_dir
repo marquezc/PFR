@@ -1,6 +1,7 @@
 # File Structure for PFR Tool
 
 index.html - PFR Reporting Interface (PRI) Home Page
+basics.html - PFR Basics Article reformatted for Web View
 
 js/ - All javascript required for PRI (basic and browser friendly!)
 css/ - All css required for PRI (basic and browser friendly!)
